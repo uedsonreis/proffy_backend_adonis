@@ -1,0 +1,10 @@
+GET http://localhost:3333/connections
+
+###
+
+POST http://localhost:3333/connections
+Content-Type: application/json
+
+{
+    "userId": 1
+}

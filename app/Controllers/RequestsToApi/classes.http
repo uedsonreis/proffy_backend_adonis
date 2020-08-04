@@ -1,0 +1,24 @@
+GET http://localhost:3333/classes?subject=Programação&weekDay=2
+
+###
+
+POST http://localhost:3333/classes
+Content-Type: application/json
+
+{
+    "user": {
+        "name": "Uedson Reis",
+        "avatar": "https://avatars3.githubusercontent.com/u/7030518?s=460&u=6f68e22a665ea04c0353e606320cf4d934784d79&v=4",
+        "whatsapp": "71999887766",
+        "bio": "Além de professor de disciplinas de programação de sistemas, atuo como Desenvolvedor em projetos de software mobile e/ou web, implementando soluções, liderando equipes, e debatendo novas ideias."
+    },
+    "objClass": {
+        "subject": "Matemática",
+        "cost": 85.00
+    },
+    "schedules": [
+        { "weekDay": 2, "from": "9:00", "to": "12:00" },
+        { "weekDay": 4, "from": "14", "to": "17:30" },
+        { "weekDay": 6, "from": "10:00", "to": "12:00" }
+    ]
+}
