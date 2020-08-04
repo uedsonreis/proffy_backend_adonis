@@ -7,16 +7,16 @@ export default class Connection extends BaseModel {
     @column({ isPrimary: true })
     public id: number
 
-    @column()
+    @column({ serializeAs: 'userId' })
     public userId: number
 
     @belongsTo(() => User)
     public user: BelongsTo<typeof User>
 
-    @column.dateTime({ autoCreate: true })
+    @column.dateTime({ autoCreate: true, serializeAs: 'createdAt' })
     public createdAt: DateTime
 
-    @column.dateTime({ autoCreate: true, autoUpdate: true })
+    @column.dateTime({ autoCreate: true, autoUpdate: true, serializeAs: 'updatedAt' })
     public updatedAt: DateTime
 
 }

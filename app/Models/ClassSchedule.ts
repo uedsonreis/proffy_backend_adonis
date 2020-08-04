@@ -7,7 +7,7 @@ export default class ClassSchedule extends BaseModel {
     @column({ isPrimary: true })
     public id: number
 
-    @column()
+    @column({ serializeAs: 'weekDay' })
     public weekDay: number
 
     @column()
@@ -16,16 +16,16 @@ export default class ClassSchedule extends BaseModel {
     @column()
     public to: number
 
-    @column()
+    @column({ serializeAs: 'classId' })
     public classId: number
 
     @belongsTo(() => Class)
     public class: BelongsTo<typeof Class>
 
-    @column.dateTime({ autoCreate: true })
+    @column.dateTime({ autoCreate: true, serializeAs: 'createdAt' })
     public createdAt: DateTime
 
-    @column.dateTime({ autoCreate: true, autoUpdate: true })
+    @column.dateTime({ autoCreate: true, autoUpdate: true, serializeAs: 'updatedAt' })
     public updatedAt: DateTime
 
 }
