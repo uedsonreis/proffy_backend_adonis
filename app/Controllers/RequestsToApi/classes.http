@@ -1,4 +1,4 @@
-GET http://localhost:3333/classes?subject=Programação&weekDay=2
+GET http://localhost:3333/classes?subject=Matemática&weekDay=5
 
 ###
 
